@@ -1,0 +1,57 @@
+body {
+    padding-top: 65px;
+    background-color: rgba(104, 104, 177, 0.514);
+}
+
+/* This converts our div.body element into a flexbox that organizes its contents as a row
+    ( flex-direction ) and wraps the contents to new rows if space is not available for all rows ( flex-wrap)
+    The contents will be surrounded by equal margin spaces hortizontally ( justify-content ) */
+.body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Makes the .canvas-area twice the size of the .input-area
+    adds center-aligning and margin so that there be space between .input-area and .convas-area */
+.convas-area {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* adds a black border to the canvas element */
+.img-canvas {
+    border: 1px solid #000000;
+}
+
+/* adds center-aligning and margin so that there be space between .input-area and .convas-area */
+.input-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.has-error .form-control{
+    border-width: 3px;
+}
+
+.form-control {
+    padding: 5px;
+}
+/* We are almost done with our styles, except that the form inputs are now in different sizes. This happens because Bootstrap's .form-input styles tell the respective div to occupy the entire width of its parent div. However, when we add align-items: center in our style, we are telling the parent div to assign a limited width so that the contents are not overlapped and are then centered inside the flexbox. So, the width of each element now differs based on its contents. */
+
+/* To overcome this problem, we simply need to specify a fixed width to the .form-input class. Also, let's add some extra top margin to the download button. */
+.form-group {
+    width:90%;
+}
+
+.download-button {
+    margin-top: 10px;
+}

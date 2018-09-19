@@ -1,0 +1,44 @@
+body {
+  padding-top: 65px;
+}
+
+.form-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 20px;
+}
+
+.form-group {
+  min-width: 500px;
+}
+
+/* specify a size for the loading indicator image without breaking its original aspect ratio */
+.loading-indicator {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.chart-area {
+  margin: 25px;
+  max-width: 600px;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* 
+if the device width is less than 736px change the min-width
+    of the .form-group to 90vw ( 90% of the size of the width of the viewport ) 
+*/
+@media only screen and (max-width: 736px) {
+  .form-group {
+    min-width: 90vw;
+  }
+}
